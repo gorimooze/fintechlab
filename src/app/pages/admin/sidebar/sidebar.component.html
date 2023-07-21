@@ -1,0 +1,72 @@
+<nav class="sidebar">
+  <div class="wrap">
+    <div class="container">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 24 24"
+             style="fill: none; stroke: currentcolor; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round;">
+          <path d="m 6,7 6,10"></path>
+          <path d="M 18,7 V 7"></path>
+        </svg>
+      </div>
+
+      <div class="sidebar-container-btn">
+        <a href="#" class="sidebar-button sidebar-button_active">
+          <div class="sidebar-button-wrapper">
+            <i class="fa-solid fa-house"></i>
+            <h3 class="sidebar-button__text">Home</h3>
+          </div>
+        </a>
+        <a href="#" class="sidebar-button">
+          <div class="sidebar-button-wrapper">
+            <i class="fa-solid fa-chart-simple"></i>
+            <h3 class="sidebar-button__text">Dashboard</h3>
+          </div>
+        </a>
+        <a href="#" class="sidebar-button">
+          <div class="sidebar-button-wrapper">
+            <i class="fa-solid fa-users"></i>
+            <h3 class="sidebar-button__text">Users</h3>
+          </div>
+        </a>
+        <a href="#" class="sidebar-button">
+          <div class="sidebar-button-wrapper">
+            <i class="fa-regular fa-calendar-days"></i>
+            <h3 class="sidebar-button__text">Calendar</h3>
+          </div>
+        </a>
+        <a href="#" class="sidebar-button">
+          <div class="sidebar-button-wrapper">
+            <i class="fa-solid fa-diagram-project"></i>
+            <h3 class="sidebar-button__text">Projects</h3>
+          </div>
+        </a>
+        <a href="#" class="sidebar-button">
+          <div class="sidebar-button-wrapper">
+            <i class="fa-solid fa-clipboard-question"></i>
+            <h3 class="sidebar-button__text">Help</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="sidebar-profile">
+      <a href="#" class="sidebar-button">
+        <div class="sidebar-button-wrapper">
+          <i class="fa-solid fa-circle-user"></i>
+          <h3 class="sidebar-button__text">{{email$ | async}}</h3>
+        </div>
+      </a>
+      <button (click)="logout()" class="logout-button">
+        <div class="logout-button-wrapper">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <h3 class="logout-button__text">Logout</h3>
+        </div>
+      </button>
+    </div>
+  </div>
+
+</nav>

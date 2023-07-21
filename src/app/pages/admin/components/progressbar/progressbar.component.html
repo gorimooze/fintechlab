@@ -1,0 +1,12 @@
+<div class="progressbar-card">
+  <div class="caption">
+    <div>{{(percentage$ | async)?.positionName}}</div>
+    <div>{{(percentage$ | async)?.percentage}}%</div>
+  </div>
+  <mat-progress-bar
+    class="progressbar"
+    mode="determinate"
+    color="accent"
+    value="{{(percentage$ | async)?.percentage}}"
+  ></mat-progress-bar>
+</div>

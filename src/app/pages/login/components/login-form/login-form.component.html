@@ -1,0 +1,42 @@
+<div class="form-container">
+  <div class="logo">
+    <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 24 24"
+         style="fill: none; stroke: currentcolor; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round;">
+      <path d="m 6,7 6,10"></path>
+      <path d="M 18,7 V 7"></path>
+    </svg>
+  </div>
+  <h2 class="form-container__title">Sign in</h2>
+  <form class="form-wrap" (ngSubmit)="signInButtonClicked($event)" [formGroup]="form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email"
+             placeholder="Ex. pat@example.com">
+      <mat-error *ngIf="form.get('email')?.touched && form.get('email')?.invalid">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="form.get('email')?.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password"
+             placeholder="Password">
+      <mat-error *ngIf="form.get('password')?.touched && form.get('password')?.hasError('minlength')">
+        The minimum password length must be {{ form.get('password')!.errors?.['minlength']!.requiredLength }},
+        actual is {{ form.get('password')!.errors?.['minlength']!.actualLength }}
+      </mat-error>
+      <mat-error *ngIf="form.get('password')?.hasError('required')">
+        Password is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <div class="form-wrap-link">
+      <a href="#">Forgot password?</a>
+    </div>
+    <button color="primary">Sign in</button>
+  </form>
+</div>
+
+

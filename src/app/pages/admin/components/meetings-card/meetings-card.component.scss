@@ -1,0 +1,40 @@
+.meeting-card {
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 16px;
+  margin-bottom: 15px;
+
+  &-wrap {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .meeting-left {
+      display: flex;
+      align-items: center;
+
+      .meeting-img {
+        img {
+          border-radius: 50%;
+          object-fit: cover;
+          margin-right: 16px;
+        }
+      }
+
+      .meeting-title {
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.6;
+        color:  rgb(69, 90, 100);
+      }
+
+      .meeting-time {
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1.43;
+        color: rgb(96, 125, 139);
+      }
+    }
+  }
+}
